@@ -1,16 +1,124 @@
 ﻿using System;
+using System.IO;
+using System.Numerics;
+using System.Reflection.Metadata.Ecma335;
+using System.Threading;
 
 namespace Térképszerkesztő
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static string lang = "Magyar";
+        static void Main()
         {
-            //A pálya határainak legenerálása
-            char[,] currentMap = general();
-            static char[,] general()
+            //Kezdőlap
+            static void landPage()
             {
-                char[,] baseMap = new char[6, 24];
+                Console.Clear();
+                Console.WriteLine("Labirintus Játék | Térkép Készítő");
+                Console.WriteLine("Nyomjon egy gombot a továbblépéshez!");
+                char r = Console.ReadKey(intercept: true).KeyChar;
+            }
+            landPage();
+
+            //Beállítások meghívása
+            //string lang = "Magyar";
+            int height = 7;
+            int width = 25;
+            bool run = true;
+            while (run)
+            {
+                Console.Clear();
+                Console.WriteLine("(Válaszoljon Számmal majd nyomjon ENTER-t!)");
+                Console.WriteLine("1) Nyelvválasztás");
+                Console.WriteLine("2) Saját pálya készítése");
+                Console.WriteLine("3) Pálya Betöltése (Nem módosítás esetén a pálya mérete : (7*25))");
+                string choice = Console.ReadLine();
+                if (choice == "1")
+                {
+                    Console.Clear();
+                    Console.WriteLine("1) English");
+                    Console.WriteLine("2) Magyar");
+                    string langChoice = Console.ReadLine();
+                    if (langChoice == "1")
+                    {
+                        lang = "English";
+                        Console.Clear();
+                    }
+                    else if (langChoice == "2")
+                    {
+                        lang = "Magyar";
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        lang = "Magyar";
+                        Console.Clear();
+                    }
+                }
+                else if (choice == "2")
+                {
+                    string inp;
+                    bool valid = false;
+                    while (!valid)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("A pálya magassága (Horizontális méret) : (min 5)");
+                        inp = Console.ReadLine();
+                        if (int.TryParse(inp, out height))
+                        {
+                            height = Convert.ToInt32(inp);
+                            valid = true;
+                        }
+                    }
+
+                    if (height < 5)
+                    {
+                        height = 5;
+                    }
+
+                    valid = false;
+
+                    while (!valid)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("A pálya szélessége (Vertikális méret) : (min 5)");
+                        inp = Console.ReadLine();
+                        if (int.TryParse(inp, out width))
+                        {
+                            width = Convert.ToInt32(inp);
+                            valid = true;
+                        }
+                    }
+
+                    if (width < 5)
+                    {
+                        width = 5;
+                    }
+
+                    Console.Clear();
+                    Console.WriteLine("1) Vissza a főmenübe");
+                    Console.WriteLine("2) Tovább a pályaszerkesztőhöz");
+                    string next = Console.ReadLine();
+                    if (next == "2")
+                    {
+                        run = false;
+                    }
+                    Console.Clear();
+                }
+                else if (choice == "3")
+                {
+                    run = false;
+                }
+            }
+            string settings = lang + " " + Convert.ToString(height) + " " + Convert.ToString(width);
+            Console.Clear();
+
+            //A pálya határainak legenerálása
+            char[,] currentMap = general(height, width);
+            static char[,] general(int height, int width)
+            {
+                char[,] baseMap = new char[height, width];
                 for (int i = 0; i != baseMap.GetLength(0); i++)
                 {
                     for (int j = 0; j != baseMap.GetLength(1); j++)
@@ -33,24 +141,10 @@ namespace Térképszerkesztő
             }
 
 
-            //Teremkereső
-            static void roomSeek(char[,] map)
-            {
-            int roomCount = 0;
-                for (int i = 0; i != map.GetLength(0); i++)
-                {
-                    for (int j = 0; j != map.GetLength(1); j++)
-                    {
-                        if (map[i,j] == '█')
-                        {
-                            roomCount++;
-                        }
-                    }
-                }
-                Console.BackgroundColor = ConsoleColor.Red;
-                Console.SetCursorPosition(0,21);
-                Console.WriteLine($"Elhelyezett termek száma: {roomCount}");
-            }
+            //Kezdőpozíció
+            int kx = 0;
+            int ky = 0;
+
 
 
             //Építőelemek
@@ -58,8 +152,45 @@ namespace Térképszerkesztő
             char room = '█';
 
 
+            //Alap információk kiírása
+            static void welcome(int currentLength, string lang)
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(currentLength + 15, 0);
+                Console.WriteLine("| Mozgás : WASD | Pályaelemek letétele : 0-9 |");
+                Console.SetCursorPosition(currentLength + 15, 1);
+                Console.WriteLine("| Kereszteződés : K | Terem : T |");
+                Console.SetCursorPosition(currentLength + 15, 2);
+                Console.WriteLine("| Beállítások : B | Kilépés : Q |");
+                Console.SetCursorPosition(currentLength + 15, 3);
+                Console.WriteLine($"| Nyelv : {lang} | Törlés : Backspace |");
+            }
+
+
+            //Teremkereső
+            static int roomSeek(char[,] map)
+            {
+                int roomCount = 0;
+                for (int i = 0; i != map.GetLength(0); i++)
+                {
+                    for (int j = 0; j != map.GetLength(1); j++)
+                    {
+                        if (map[i, j] == '█')
+                        {
+                            roomCount++;
+                        }
+                    }
+                }
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.SetCursorPosition(0, map.GetLength(0) + 7);
+                Console.WriteLine($"Elhelyezett termek száma: {roomCount}");
+                Console.BackgroundColor = ConsoleColor.Black;
+                return roomCount;
+            }
+            
+
             //Kijárat számoló
-            static void exitFinder(char[,] map)
+            static int exitFinder(char[,] map)
             {
                 int exitCount = 0;
                 string LComponents = "═╗╣╝╩╦╬";
@@ -77,7 +208,7 @@ namespace Térképszerkesztő
                             exitCount++;
                         }
                         //jobb szélső oszlop
-                        if (map[i, map.GetLength(1)-1] == RComponents[j])
+                        if (map[i, map.GetLength(1) - 1] == RComponents[j])
                         {
                             exitCount++;
                         }
@@ -100,20 +231,17 @@ namespace Térképszerkesztő
                         }
                     }
                 }
+                Console.BackgroundColor = ConsoleColor.Red;
                 Console.WriteLine($"Kijáratok száma: {exitCount}");
+                Console.BackgroundColor = ConsoleColor.Black;
+                return exitCount;
             }
 
 
-            //Kezdőpozíció
-            int kx = 0;
-            int ky = 0;
-            Console.SetCursorPosition(kx, ky);
-
-
             //Koordináta Kiíratás
-            static void write(int kx, int ky)
+            static void write(int kx, int ky, int currentHeight)
             {
-                Console.SetCursorPosition(0, 20);
+                Console.SetCursorPosition(0, currentHeight + 5);
                 Console.BackgroundColor = ConsoleColor.Red;
                 Console.WriteLine($"Szélesség: {kx.ToString("D2")} Magasság: {ky.ToString("D2")}");
                 Console.SetCursorPosition(kx, ky);
@@ -121,12 +249,14 @@ namespace Térképszerkesztő
             }
 
 
-            //Kezdőpozíció
+            //Kezdőpozíció | Alap kiírás
             Console.SetCursorPosition(kx, ky);
+            welcome(currentMap.GetLength(1), lang);
+            write(kx, ky, currentMap.GetLength(0));
 
 
             //Irányítás
-            bool run = true;
+            run = true;
             while (run)
             {
                 char input = Convert.ToChar(Convert.ToString(Console.ReadKey(intercept: true).KeyChar).ToLower());
@@ -137,7 +267,7 @@ namespace Térképszerkesztő
                         {
                             Console.SetCursorPosition(kx, ky - 1);
                             ky -= 1;
-                            write(kx, ky);
+                            write(kx, ky, currentMap.GetLength(0));
                         }
                         break;
                     case 's':
@@ -145,7 +275,7 @@ namespace Térképszerkesztő
                         {
                             Console.SetCursorPosition(kx, ky + 1);
                             ky += 1;
-                            write(kx, ky);
+                            write(kx, ky, currentMap.GetLength(0));
                         }
                         break;
                     case 'a':
@@ -153,7 +283,7 @@ namespace Térképszerkesztő
                         {
                             Console.SetCursorPosition(kx - 1, ky);
                             kx -= 1;
-                            write(kx, ky);
+                            write(kx, ky, currentMap.GetLength(0));
                         }
                         break;
                     case 'd':
@@ -161,8 +291,12 @@ namespace Térképszerkesztő
                         {
                             Console.SetCursorPosition(kx + 1, ky);
                             kx += 1;
-                            write(kx, ky);
+                            write(kx, ky, currentMap.GetLength(0));
                         }
+                        break;
+                    case 'b':
+                        Main();
+                        run = false;
                         break;
 
                     case '0':
@@ -189,16 +323,76 @@ namespace Térképszerkesztő
                         currentMap[ky, kx] = room;
                         Console.SetCursorPosition(kx, ky);
                         break;
+                    case '\b':
+                        Console.Write(".");
+                        currentMap[ky, kx] = '.';
+                        Console.SetCursorPosition(kx, ky);
+                        break;
                     case 'q':
-                        run = false;
                         roomSeek(currentMap);
                         exitFinder(currentMap);
+                        if (roomSeek(currentMap) < 1 || exitFinder(currentMap) < 2)
+                        {
+                            Console.BackgroundColor = ConsoleColor.Red;
+                            Console.SetCursorPosition(currentMap.GetLength(1) + 15, currentMap.GetLength(0));
+                            Console.WriteLine("A pályában muszáj minimum 1 szobának, és 2 kijáratnak lennie.");
+                            Console.SetCursorPosition(kx, ky);
+                            Console.BackgroundColor = ConsoleColor.Black;
+                        }
+                        else
+                        {
+                            Console.SetCursorPosition(currentMap.GetLength(1) + 15, currentMap.GetLength(0));
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            string del = new String(' ', 100);
+                            Console.WriteLine(del);
+                            run = false;
+                        }
                         break;
                 }
             }
-            Console.ReadKey();
+            //Mentés
+            Console.Clear();
+            run = true;
+            while (run)
+            {
+                Console.WriteLine("1) Kilépés");
+                Console.WriteLine("2) Fáljba mentés és Kilépés");
+                string exit = Console.ReadLine();
+                if (exit == "1")
+                {
+                    Console.WriteLine("Kilépés...");
+                    Thread.Sleep(1000);
+                    run = false;
+                }
+                else if (exit == "2")
+                {
+                    // Fájlba mentés
+                    Console.WriteLine("Mentés helye : (Alap : Dokumentumok mappa)");
+                    string docPath = Console.ReadLine();
+                    if (docPath == "")
+                    {
+                        docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                    }
+
+                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "Labyrinth.sav")))
+                    {
+                        for (int i = 0; i != currentMap.GetLength(0); i++)
+                        {
+                            for (int j = 0; j != currentMap.GetLength(1); j++)
+                            {
+                                outputFile.Write(currentMap[i, j]);
+                            }
+                            outputFile.WriteLine();
+                        }
+                    }
+                    Console.WriteLine("Fájl elmentve.");
+                    Thread.Sleep(1000);
+                    run = false;
+                }
+            }
+
         }
-        //todo 1: Minimális szinten is meg kell akadályozni a kijárat és terem nélküli térkép mentését. | Ellenőrizni a begyűjtött értékeket
-        //todo 2: Alap információk
     }
 }
+        //todo 1: Konzisztencia
+        //todo 2: nyelv
