@@ -1,0 +1,16 @@
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\bin\Debug\netcoreapp3.1\Térképszerkesztő.exe
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\bin\Debug\netcoreapp3.1\Térképszerkesztő.deps.json
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\bin\Debug\netcoreapp3.1\Térképszerkesztő.runtimeconfig.json
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\bin\Debug\netcoreapp3.1\Térképszerkesztő.runtimeconfig.dev.json
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\bin\Debug\netcoreapp3.1\Térképszerkesztő.dll
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\bin\Debug\netcoreapp3.1\Térképszerkesztő.pdb
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\obj\Debug\netcoreapp3.1\Térképszerkesztő.csproj.AssemblyReference.cache
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\obj\Debug\netcoreapp3.1\Térképszerkesztő.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\obj\Debug\netcoreapp3.1\Térképszerkesztő.AssemblyInfoInputs.cache
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\obj\Debug\netcoreapp3.1\Térképszerkesztő.AssemblyInfo.cs
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\obj\Debug\netcoreapp3.1\Térképszerkesztő.csproj.CoreCompileInputs.cache
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\obj\Debug\netcoreapp3.1\Térképszerkesztő.dll
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\obj\Debug\netcoreapp3.1\Térképszerkesztő.pdb
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\obj\Debug\netcoreapp3.1\Térképszerkesztő.genruntimeconfig.cache
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\obj\Debug\netcoreapp3.1\Térképszerkesztő.Properties.Resources.resources
+D:\Programming     _\Január Projektfeladat\Térképszerkesztő\Térképszerkesztő\obj\Debug\netcoreapp3.1\Térképszerkesztő.csproj.GenerateResource.cache

@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="askHeightENG" xml:space="preserve">
+    <value>Custom Height (Horizontal dimension) : (Minimum : 5)</value>
+    <comment>Saját pályaméret | Magasság bekérés ENG</comment>
+  </data>
+  <data name="askHeightHU" xml:space="preserve">
+    <value>A pálya magassága (Horizontális méret) : (Minimum : 5)</value>
+    <comment>Saját pályaméret | Magasság bekérés HU</comment>
+  </data>
+  <data name="askNextENG" xml:space="preserve">
+    <value>1) Main Menu
+2) Proceed to map editor</value>
+    <comment>Következő lépés a saját pályaméret magadása után ENG</comment>
+  </data>
+  <data name="askNextHU" xml:space="preserve">
+    <value>1) Vissza a főmenübe
+2) Tovább a pályaszerkesztőhöz</value>
+    <comment>Következő lépés a saját pályaméret magadása után HU</comment>
+  </data>
+  <data name="askSaveENG" xml:space="preserve">
+    <value>Location of save : (Default : Documents folder)</value>
+    <comment>Mentés helye ENG</comment>
+  </data>
+  <data name="askSaveHU" xml:space="preserve">
+    <value>Mentés helye : (Alap : Dokumentumok mappa)</value>
+    <comment>Mentés helye HU</comment>
+  </data>
+  <data name="askWidthENG" xml:space="preserve">
+    <value>Custom Width (Vertical dimension) : (Minimum : 5)</value>
+    <comment>Saját pályaméret | Szélesség bekérés ENG</comment>
+  </data>
+  <data name="askWidthHU" xml:space="preserve">
+    <value>A pálya szélessége (Vertikális méret) : (Minimum : 5)</value>
+    <comment>Saját pályaméret | Szélesség bekérés HU</comment>
+  </data>
+  <data name="cordsENG" xml:space="preserve">
+    <value>Width: {0} Height: {1}</value>
+    <comment>Koordináták Kiírása ENG</comment>
+  </data>
+  <data name="cordsHU" xml:space="preserve">
+    <value>Szélesség: {0} Magasság: {1}</value>
+    <comment>Koordináták Kiírása HU</comment>
+  </data>
+  <data name="errorENG" xml:space="preserve">
+    <value>Your map must contain a minimum of 1 room and 2 exits.</value>
+    <comment>Hibaüzenet ENG</comment>
+  </data>
+  <data name="errorHU" xml:space="preserve">
+    <value>A pályában muszáj minimum 1 szobának, és 2 kijáratnak lennie.</value>
+    <comment>Hibaüzenet HU</comment>
+  </data>
+  <data name="exfilENG" xml:space="preserve">
+    <value>Number of placed exits: {0}</value>
+    <comment>Elhelyezett kijáratok ENG</comment>
+  </data>
+  <data name="exfilHU" xml:space="preserve">
+    <value>Kijáratok száma: {0}</value>
+    <comment>Elhelyezett kijáratok HU</comment>
+  </data>
+  <data name="exitENG" xml:space="preserve">
+    <value>1) Exit
+2) Save map to file and exit</value>
+    <comment>Kilépés ENG</comment>
+  </data>
+  <data name="exitHU" xml:space="preserve">
+    <value>1) Kilépés
+2) Fáljba mentés és Kilépés</value>
+    <comment>Kilépés HU</comment>
+  </data>
+  <data name="info1ENG" xml:space="preserve">
+    <value>| Movement: WASD | Placing components : 0-9 |</value>
+    <comment>Alap információk kiírása 1 ENG</comment>
+  </data>
+  <data name="info1HU" xml:space="preserve">
+    <value>| Mozgás : WASD | Pályaelemek letétele : 0-9 |
+</value>
+    <comment>Alap információk kiírása 1 HU</comment>
+  </data>
+  <data name="info2ENG" xml:space="preserve">
+    <value>| Crossroad: K | Room : T |</value>
+    <comment>Alap információk kiírása 2 ENG</comment>
+  </data>
+  <data name="info2HU" xml:space="preserve">
+    <value>| Kereszteződés : K | Terem : T |</value>
+    <comment>Alap információk kiírása 2 HU</comment>
+  </data>
+  <data name="info3ENG" xml:space="preserve">
+    <value>| Settings : B | Quit : Q |</value>
+    <comment>Alap információk kiírása 3 ENG</comment>
+  </data>
+  <data name="info3HU" xml:space="preserve">
+    <value>| Beállítások : B | Kilépés : Q |</value>
+    <comment>Alap információk kiírása 3 HU</comment>
+  </data>
+  <data name="info4ENG" xml:space="preserve">
+    <value>| Language : {0} | Delete : Backspace |</value>
+    <comment>Alap információk kiírása 4 ENG</comment>
+  </data>
+  <data name="info4HU" xml:space="preserve">
+    <value>| Nyelv : {0} | Törlés : Backspace |</value>
+    <comment>Alap információk kiírása 4 HU</comment>
+  </data>
+  <data name="landPageTextENG" xml:space="preserve">
+    <value>Labyrinth Game | Map Maker
+Press any key to continue!</value>
+    <comment>landPage Function | Kezdőlap kiírás ENG</comment>
+  </data>
+  <data name="landPageTextHU" xml:space="preserve">
+    <value>Labirintus Játék | Térkép Készítő 
+Nyomjon egy gombot a továbblépéshez!</value>
+    <comment>landPage Function | Kezdőlap kiírás HU</comment>
+  </data>
+  <data name="roomENG" xml:space="preserve">
+    <value>Placed Rooms : {0}</value>
+    <comment>Teremkereső ENG</comment>
+  </data>
+  <data name="roomHU" xml:space="preserve">
+    <value>Elhelyezett termek száma: {0}</value>
+    <comment>Teremkereső HU</comment>
+  </data>
+  <data name="settingsENG" xml:space="preserve">
+    <value>(To navigate the menu, enter a number and press ENTER!)
+1) Language
+2) Customize map
+3) Map Editor (Default map size : (7*25))</value>
+    <comment>A beállítások kiírása ENG</comment>
+  </data>
+  <data name="settingsHU" xml:space="preserve">
+    <value>(A menük navigálásához válaszoljon számmal majd nyomjon ENTER-t!)
+1) Nyelvválasztás
+2) Saját pálya készítése
+3) Pálya Betöltése (Alapértelmezett pálya mérete : (7*25))</value>
+    <comment>A beállítások kiírása HU</comment>
+  </data>
+  <data name="tempExENG" xml:space="preserve">
+    <value>Closing...</value>
+    <comment>Kilépés visszajelzés ENG</comment>
+  </data>
+  <data name="tempExHU" xml:space="preserve">
+    <value>Kilépés...</value>
+    <comment>Kilépés visszajelzés HU</comment>
+  </data>
+  <data name="tempSaveENG" xml:space="preserve">
+    <value>File saved.</value>
+    <comment>Kilépés visszajelzés ENG</comment>
+  </data>
+  <data name="tempSaveHU" xml:space="preserve">
+    <value>Fájl elmentve.</value>
+    <comment>Mentés visszajelzés HU</comment>
+  </data>
+</root>
