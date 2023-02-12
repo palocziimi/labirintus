@@ -247,7 +247,7 @@ Nyomjon egy gombot a továbblépéshez!</value>
     <value>(A menük navigálásához válaszoljon számmal majd nyomjon ENTER-t!)
 1) Nyelvválasztás
 2) Saját pálya készítése
-3) Pálya Betöltése (Alapértelmezett pálya mérete : (7*25))</value>
+3) Pálya Betöltése (Alapértelmezett pálya mérete : (6*24))</value>
     <comment>A beállítások kiírása HU</comment>
   </data>
   <data name="tempExENG" xml:space="preserve">
@@ -265,5 +265,45 @@ Nyomjon egy gombot a továbblépéshez!</value>
   <data name="tempSaveHU" xml:space="preserve">
     <value>Fájl elmentve.</value>
     <comment>Mentés visszajelzés HU</comment>
+  </data>
+  <data name="title1ENG" xml:space="preserve">
+    <value>Map Maker - Main Menu</value>
+    <comment>Főmenü title ENG</comment>
+  </data>
+  <data name="title1HU" xml:space="preserve">
+    <value>Térképszerkesztő - Főmenü</value>
+    <comment>Főmenü title HU</comment>
+  </data>
+  <data name="title2ENG" xml:space="preserve">
+    <value>Map Maker - Settings</value>
+    <comment>Beállítások title ENG</comment>
+  </data>
+  <data name="title2HU" xml:space="preserve">
+    <value>Térképszerkesztő - Beállítások</value>
+    <comment>Beállítások title HU</comment>
+  </data>
+  <data name="title3ENG" xml:space="preserve">
+    <value>Map Maker - Language</value>
+    <comment>Nyelvválasztás title ENG</comment>
+  </data>
+  <data name="title3HU" xml:space="preserve">
+    <value>Térképszerkesztő - Nyelvválasztás</value>
+    <comment>Nyelvválasztás title HU</comment>
+  </data>
+  <data name="title4ENG" xml:space="preserve">
+    <value>Map Maker - Custom Map Maker</value>
+    <comment>Pályakészítés title ENG</comment>
+  </data>
+  <data name="title4HU" xml:space="preserve">
+    <value>Térképszerkesztő - Saját pálya készítés</value>
+    <comment>Pályakészítés title HU</comment>
+  </data>
+  <data name="title5ENG" xml:space="preserve">
+    <value>Map Maker</value>
+    <comment>Pálya title ENG</comment>
+  </data>
+  <data name="title5HU" xml:space="preserve">
+    <value>Térképkészítő</value>
+    <comment>Pálya title HU</comment>
   </data>
 </root>

@@ -335,7 +335,7 @@ namespace Térképszerkesztő.Properties {
         ///   Looks up a localized string similar to (A menük navigálásához válaszoljon számmal majd nyomjon ENTER-t!)
         ///1) Nyelvválasztás
         ///2) Saját pálya készítése
-        ///3) Pálya Betöltése (Alapértelmezett pálya mérete : (7*25)).
+        ///3) Pálya Betöltése (Alapértelmezett pálya mérete : (6*24)).
         /// </summary>
         internal static string settingsHU {
             get {
@@ -376,6 +376,96 @@ namespace Térképszerkesztő.Properties {
         internal static string tempSaveHU {
             get {
                 return ResourceManager.GetString("tempSaveHU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Map Maker - Main Menu.
+        /// </summary>
+        internal static string title1ENG {
+            get {
+                return ResourceManager.GetString("title1ENG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Térképszerkesztő - Főmenü.
+        /// </summary>
+        internal static string title1HU {
+            get {
+                return ResourceManager.GetString("title1HU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Map Maker - Settings.
+        /// </summary>
+        internal static string title2ENG {
+            get {
+                return ResourceManager.GetString("title2ENG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Térképszerkesztő - Beállítások.
+        /// </summary>
+        internal static string title2HU {
+            get {
+                return ResourceManager.GetString("title2HU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Map Maker - Language.
+        /// </summary>
+        internal static string title3ENG {
+            get {
+                return ResourceManager.GetString("title3ENG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Térképszerkesztő - Nyelvválasztás.
+        /// </summary>
+        internal static string title3HU {
+            get {
+                return ResourceManager.GetString("title3HU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Map Maker - Custom Map Maker.
+        /// </summary>
+        internal static string title4ENG {
+            get {
+                return ResourceManager.GetString("title4ENG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Térképszerkesztő - Saját pálya készítés.
+        /// </summary>
+        internal static string title4HU {
+            get {
+                return ResourceManager.GetString("title4HU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Map Maker.
+        /// </summary>
+        internal static string title5ENG {
+            get {
+                return ResourceManager.GetString("title5ENG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Térképkészítő.
+        /// </summary>
+        internal static string title5HU {
+            get {
+                return ResourceManager.GetString("title5HU", resourceCulture);
             }
         }
     }

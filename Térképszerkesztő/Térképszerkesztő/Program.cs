@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 
@@ -10,6 +9,7 @@ namespace Térképszerkesztő
         public static string lang = "Magyar";
         static void Main()
         {
+            Console.Title = (lang == "Magyar") ? Properties.Resources.title1HU : Properties.Resources.title1ENG;
             //Kezdőlap
             static void landPage()
             {
@@ -26,11 +26,13 @@ namespace Térképszerkesztő
             bool run = true;
             while (run)
             {
+                Console.Title = (lang == "Magyar") ? Properties.Resources.title2HU : Properties.Resources.title2ENG;
                 Console.Clear();
                 Console.WriteLine((lang == "Magyar") ? Properties.Resources.settingsHU : Properties.Resources.settingsENG);
                 string choice = Console.ReadLine();
                 if (choice == "1")
                 {
+                    Console.Title = (lang == "Magyar") ? Properties.Resources.title3HU : Properties.Resources.title3ENG;
                     Console.Clear();
                     Console.WriteLine("1) English");
                     Console.WriteLine("2) Magyar");
@@ -54,6 +56,7 @@ namespace Térképszerkesztő
                 else if (choice == "2")
                 {
                     string inp;
+                    Console.Title = (lang == "Magyar") ? Properties.Resources.title4HU : Properties.Resources.title4ENG;
                     bool valid = false;
                     while (!valid)
                     {
@@ -103,9 +106,9 @@ namespace Térképszerkesztő
                 else if (choice == "3")
                 {
                     run = false;
+                    Console.Title = (lang == "Magyar") ? Properties.Resources.title5HU : Properties.Resources.title5ENG;
                 }
             }
-            string settings = lang + " " + Convert.ToString(height) + " " + Convert.ToString(width);
             Console.Clear();
 
             //A pálya határainak legenerálása
@@ -180,7 +183,7 @@ namespace Térképszerkesztő
                 Console.BackgroundColor = ConsoleColor.Black;
                 return roomCount;
             }
-            
+
 
             //Kijárat számoló
             static int exitFinder(char[,] map)
@@ -248,8 +251,6 @@ namespace Térképszerkesztő
             Console.SetCursorPosition(kx, ky);
             welcome(currentMap.GetLength(1), lang);
             write(kx, ky, currentMap.GetLength(0));
-
-            //Konzisztencia ellenőrzés
 
 
             //Irányítás
@@ -365,12 +366,12 @@ namespace Térképszerkesztő
                     // Fájlba mentés
                     Console.WriteLine((lang == "Magyar") ? Properties.Resources.askSaveHU : Properties.Resources.askSaveENG);
                     string docPath = Console.ReadLine();
-                    if (docPath == "")
+                    if (!(Directory.Exists(docPath)) || docPath == "")
                     {
                         docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     }
 
-                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "Labyrinth.sav")))
+                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "Labyrinth.txt")))
                     {
                         for (int i = 0; i != currentMap.GetLength(0); i++)
                         {
@@ -390,4 +391,3 @@ namespace Térképszerkesztő
         }
     }
 }
-        //todo 1: Konzisztencia
