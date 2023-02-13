@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Labirintus játék</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+	<div id="header">
+		<div class="clearfix">
+			<div class="kep">
+				<a href="index.html"><img src="images/labirintus.jpg" alt="Labirintus_kep"></a>
+			</div>
+		</div>
+	</div>
+	<div class="highlight">
+		<div class="clearfix">
+			<div class="testimonial">
+			</div>
+			<h1>A játék lényege</h1>
+			<p>
+				<a>A labirintus játék lényege minnél hamarabb ki jutni belőle, és minnél több kincses termet
+					találni</a>.
+			</p>
+		</div>
+	</div>
+	<div class="featured">
+		<h2>Játékszabályok</h2>
+		<ul class="clearfix">
+			<li>
+				<div class="frame1">
+					<div class="box">
+						<img src="images/WASD.jpg" alt="WASD" height="130" width="197">
+					</div>
+				</div>
+				<p><b>Mozgás</b>Mozogni a játékos a WASD billenytűkkel tud, mely W(észak),A(nyugat),S(dél),D(kelet)
+					irányba mozoghat. A 'Q' billentyű a kilépést szolgálja szinte mindenhol.
+				</p>
+			</li>
+			<li>
+				<div class="frame1">
+					<div class="box">
+						<img src="images/exit.jpg" alt="Exit" height="130" width="197">
+					</div>
+				</div>
+				<p>
+					<b>Mi számít kijáratnak?</b> Minden olyan elem kijárat, ami a pálya szélén helyezkedik el, és az
+					elem egyik része merőleges a pálya egyik szélével.
+				</p>
+			</li>
+			<li>
+				<div class="frame1">
+					<div class="box">
+						<img src="images/adatok.jpg" alt="Adatok" height="50" >
+					</div>
+				</div>
+				<p>
+					<b>Adatok kiírása</b> Játék közben felül mutatja az adatokat. Ezek a következők: a pálya neve, mérete, a karakter
+					lépéseinek száma,
+					a felfedezett termek száma és a karakter számára elérhető továbbhaladási lehetőségek.
+				</p>
+			</li>
+		</ul>
+		<div class="highlight">
+			<div class="clearfix">
+				<div class="testimonial">
+				</div>
+				<h1>Labirintus játék</h1>
+				<p>
+					<a>1. Miután a program elindult, nyelvet kell választani: Magyar, Angol, vagy német<br>
+						2. Ezután be kell írni a pálya nevét, a program kikeresi, ha nem talált, azt is kiírja<br>
+						3. Ha talált a pálya nevével megegyező .sav fájlt, (pl: pálya neve - minta.txt; mentés neve -
+						minta.sav)
+						akkor felajánlja, hogy folytatsd a mentést, vagy inkább kezdenél egy új játékot<br>
+						4. ha igent nyomtál, betölt a mentés, ha nem, akkor a következőket kell megadni:<br>
+						- pályaszín<br>
+						- nehézség<br>
+						- karakternév<br>
+						- karakterszín<br>
+						FONTOS! Minden egyes nem begépelt választási lehetőségnél van lehetőséged Q-t nyomni, amivel egy
+						felirat után
+						kilép a program.<br>
+
+						5. Ezek után elkezdődik a pálya.
+						Minden egyes kincsesszobát fel kell fedezni, hogy ki tudj lépni.
+						Ha ez megvan, az egyik kijárathoz érve a kijárat irányába irányítva a karaktert, felajánlja,
+						hogy kiléphet.
+						Ha megnyomod az igenlő választ, akkor előről kezdődik az egész folyamat.<br>
+
+						FONTOS! Játék közben bármikor van lehetőséged Q-t nyomni, amivel felajánlja, hogy elmenthesd
+						az adott állapotát a játéknak. Ezt az előbb említett helyen vissza lehet tölteni.<br>
+
+						Játék közben felül mutatja az adatokat. Ezek a következők: a pálya neve, mérete, a karakter
+						lépéseinek száma,
+						a felfedezett termek száma és a karakter számára elérhető továbbhaladási lehetőségek.<br>
+
+						FONTOS! Ha a menüben, vagy a betöltött mentésben a nehézségi szint: nehéz, akkor csak azokat a
+						járatokat
+						lehet látni, amiket bejártál, illetve kevesebb információ lesz kivetítve játék közben.</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="highlight">
+		<div class="clearfix">
+			<div class="testimonial">
+			</div>
+			<h1>A játék belépése</h1>
+			<p>
+				<a><video width="1000" controls>
+					<source src="images//teszt.mp4" type="video/mp4" >
+					Videó a játék belépéséről.
+				  </video>
+					</a>.
+			</p>
+		</div>
+	</div>
+
+	<div class="highlight">
+		<div class="clearfix">
+			<div class="testimonial">
+			</div>
+			<h1>Labirintus tervező</h1>
+			<p>
+				<a> Van lehetőségünk saját labirintust is létrehozni,
+					a térképszerkesztővel! A kezdőoldalon a térképszerkesztő menüjében a
+					navigáció a következő: beírjuk a kívánt menüpont számat, majd megnyomjuk az entert.
+					alapértelmezett magassága 6sor, szélessége 24 oszlop (2.menüpont). A pályán való mozgást szintén
+					a WASD billentyűkkel lehet megvalósítani. A pálya elemeket letenni pedig 0-9 számokkal lehet,
+					mégpedig, hogy a 0 az a vízszintes egyenes az 1 pedig a függőleges egyenes. 2-9 között
+					pedig az elemek az óramutató irányát követve haladnak végig egy képzeletbeli kocka mentén.<br>
+					A 2 a kocka jobbfelső sarka, 3 a jobb közepe, 4 a jobb alsó sarka... stb. (Mint ahogy a kápen is látható)
+					<img src="images//terkepszerkeszto.jpg" alt="Térkép szerkesztő">
+					A "K"
+					betűt
+					lenyomva egy kereszteződés elemet, "T" betűt lenyomva pedig egy kincsesterem elemet lehet
+					lerakni.
+					"B" betű lenyomásával visszatérhetünk a beállítások menüponthoz, "Q" betűt lenyomva pedig ki
+					lehet lépni.
+					A kilépés felvétele 2 elhelyezett kijárat, és 1 kincsesterem a pálya területén.Backspace
+					billentyűvel pedig törölni lehet az adott mezőt.
+					Kilépés előtt van lehetőségünk elmenteni a pályánkat, amit a program egy .SAV fileba helyez el.
+					A mentés helyét meg lehet adni, vagy lehet az alap helyet használni, ami a Dokumentumok mappa.
+					Ezt a labirintus játék programmal be lehet tölteni, és lehet vele játszani. </a>.
+
+			</p>
+		</div>
+	</div>
+	</div>
+	</div>
+
+	<div id="footer">
+		<div class="clearfix">
+			<div class="section">
+				<h4>Projekt készítői:</h4>
+				<p>
+					Pálóczi Imre<br>
+					Nagy Martin Márk<br>
+					Kelemen Panna
+				</p>
+			</div>
+		</div>
+		<div id="footnote">
+			<div class="clearfix">
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
