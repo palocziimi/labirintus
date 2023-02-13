@@ -1,0 +1,37 @@
+Wählen Sie eine Sprache!
+Sprache;Deutsch
+Name der Landkarte
+Mit diesem Namen gibt es keine Landkarte :(
+Wir haben Speicherung gefunden! Möchten Sie weiterspielen? (J/N)
+Neues Spiel;Ja;Nein
+Farbe der Landkarte
+Schwerigkeitsstufe
+Normal
+Schwer
+Extrem
+Charaktername
+Charakter Farbe
+Rot
+Blau
+Gelb
+Magenta
+Grün
+Name der Landkarte
+Größe
+Reihe
+Säule
+Zahl der Schritte
+Zahl der entdeckten Räume
+Möglichkeiten des Fortschritts
+Verbleibende Zeit
+Sekunden
+
+Norden
+Süd
+Ost
+Westen
+
+Sind Sie sicher, dass Sie beenden wollen? (J/N)
+Ende! Deine Zeit:
+Noch einen Rund? (Y/N)
+Und wir sind bereit! Drücken Sie die Eingabetaste, um fortzufahren!

@@ -1,0 +1,37 @@
+Choose a language!
+Language;English
+Map name
+We didn't find a map with this name :(
+Save file found! Continue playing? (Y/N)
+New game;Yes;No
+Map color
+Difficulty
+Normal
+Hard
+Extreme
+Character name
+Character color
+Red
+Blue
+Yellow
+Magenta
+Green
+Map name
+size
+row
+column
+Step count
+Discovered rooms
+Step directions
+Remaining time
+seconds
+
+North
+South
+East
+West
+
+Are you sure you want to quit? (Y/N)
+The end! Your time:
+One more round? (Y/N)
+We are ready! Hit the Enter to continue!

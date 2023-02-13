@@ -1,0 +1,37 @@
+Válasszon nyelvet!
+Nyelv;Magyar
+Pálya neve
+Ilyen néven nem találtunk pályát :(
+Találtunk mentést! Szeretné folytatni? (I/N)
+Új játék;Igen;Nem
+Pályaszín
+Nehézség
+Normál
+Nehéz
+Extrém
+Karakternév
+Karakterszín
+Piros
+Kék
+Sárga
+Magenta
+Zöld
+Pálya neve
+mérete
+sor
+oszlop
+Lépések száma
+Felfedezett termek száma
+Továbblépési lehetőségek
+Hátralévő idő
+másodperc
+---------------27.
+Észak
+Dél
+Kelet
+Nyugat
+---------------32.
+Biztosan ki akar lépni? (I/N)
+Vége! Az időd:
+Még egy kör? (I/N)
+Kész is vagyunk! Nyomja le az Enter-t a kezdéshez!
